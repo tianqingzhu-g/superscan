@@ -1,0 +1,5 @@
+superscan
+superscan-report.json
+*.exe
+.vscode/
+.idea/

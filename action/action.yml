@@ -1,0 +1,27 @@
+name: 'SuperScan'
+description: 'Run superscan for dependency vulnerabilities'
+inputs:
+  path:
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Download superscan
+      shell: bash
+      run: |
+        curl -sSfL -o superscan "https://github.com/${{ github.action_repository }}/releases/latest/download/superscan-linux-amd64"
+        chmod +x superscan
+        sudo mv superscan /usr/local/bin/superscan
+    - name: Run scan
+      shell: bash
+      run: superscan ${{ inputs.path }}
+    - name: Fail on HIGH/CRITICAL
+      shell: bash
+      run: |
+        if [ -f superscan-report.json ]; then
+          if grep -q -E '"(CRITICAL|HIGH)"' superscan-report.json; then
+            echo "HIGH or CRITICAL vulnerabilities found!"
+            exit 1
+          fi
+        fi

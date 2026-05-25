@@ -1,0 +1,12 @@
+name: Superscan PR
+on:
+  pull_request:
+jobs:
+  superscan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run SuperScan
+        uses: ./action
+        with:
+          path: .
