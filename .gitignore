@@ -3,3 +3,4 @@ superscan-report.json
 *.exe
 .vscode/
 .idea/
+superscan-linux-amd64
