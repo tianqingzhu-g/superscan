@@ -10,7 +10,7 @@ runs:
     - name: Download superscan
       shell: bash
       run: |
-        curl -sSfL -o superscan "https://github.com/${{ github.action_repository }}/releases/latest/download/superscan-linux-amd64"
+        curl -sSfL -o superscan "https://github.com/tianqingzhu-g/superscan/releases/download/v0.1.0/superscan-linux-amd64"
         chmod +x superscan
         sudo mv superscan /usr/local/bin/superscan
     - name: Run scan
