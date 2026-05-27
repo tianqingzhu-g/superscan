@@ -49,18 +49,10 @@ go build -o superscan ./cmd/superscan
 
 ## 📦 支持的包管理器
 
->>>>>>> fb9f8c74b296d2b8f9c201b2f48d775535bad1d3
-| 语言 | 锁定文件 | 状态 |
-|------|----------|------|
-| Python | Pipfile.lock | ✅ |
-| Node.js | package-lock.json | ✅ |
-<<<<<<< HEAD
-| 更多... | 贡献中 | 🚧 |
-
-## 集成到 GitHub Actions
-\\\yaml
-=======
-| 更多... | 欢迎贡献 | 🚧 |
+语言	锁定文件	状态
+Python	Pipfile.lock	✅
+Node.js	package-lock.json	✅
+更多...	欢迎贡献	🚧
 
 ## 🔧 集成到 GitHub Actions
 
