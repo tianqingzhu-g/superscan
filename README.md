@@ -1,4 +1,3 @@
-```markdown
 # SuperScan
 
 ⚡️ **极速多语言供应链漏洞扫描器**  
