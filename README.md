@@ -1,3 +1,4 @@
+```markdown
 # SuperScan
 
 ⚡️ **极速多语言供应链漏洞扫描器**  
@@ -36,12 +37,6 @@ go build -o superscan ./cmd/superscan
 ./superscan .
 
 # 扫描指定路径
-<<<<<<< HEAD
-./superscan /path/to/project
-\\\
-
-## 支持的包管理器
-=======
 ./superscan /path/to/your/project
 ```
 
@@ -49,29 +44,20 @@ go build -o superscan ./cmd/superscan
 
 ## 📦 支持的包管理器
 
-语言	锁定文件	状态
-Python	Pipfile.lock	✅
-Node.js	package-lock.json	✅
-更多...	欢迎贡献	🚧
+| 语言 | 锁定文件 | 状态 |
+|------|----------|------|
+| Python | Pipfile.lock | ✅ |
+| Node.js | package-lock.json | ✅ |
+| 更多... | 欢迎贡献 | 🚧 |
 
 ## 🔧 集成到 GitHub Actions
 
 在 workflow 中添加：
 ```yaml
->>>>>>> fb9f8c74b296d2b8f9c201b2f48d775535bad1d3
 - name: Run SuperScan
   uses: tiangingzhu-g/superscan/action@main
   with:
     path: .
-<<<<<<< HEAD
-\\\
-
-## 贡献
-欢迎新增语言解析器！请查看 [CONTRIBUTING.md](./CONTRIBUTING.md)（即将添加）。
-
-## 许可
-MIT License
-=======
 ```
 如果发现 CRITICAL 或 HIGH 漏洞，Action 会自动失败，阻止 PR 合并。
 
@@ -83,5 +69,4 @@ MIT License
 
 MIT License
 ```
->>>>>>> fb9f8c74b296d2b8f9c201b2f48d775535bad1d3
  
